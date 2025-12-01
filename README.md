@@ -1,12 +1,12 @@
 # AWS-Secret-Monitor
 
-## 📌 Overview
+##  Overview
 **aws-secret-monitor** is a cloud-native security monitoring solution that detects and responds to unauthorized access to **AWS Secrets Manager** in near real-time.  
 It leverages **AWS CloudTrail, CloudWatch, and Amazon SNS** to provide rapid detection, automated alerting, and actionable insights — reducing Mean Time to Detect (MTTD) and strengthening your cloud security posture.
 
 ---
 
-## 🎯 Why It Matters
+## Why It Matters
 Organizations need to continuously monitor secret access to:
 - Prevent credential leakage and data breaches  
 - Meet compliance requirements (SOC 2, ISO 27001)  
@@ -16,7 +16,7 @@ This project demonstrates **event-driven detection, real-time alerting, and acti
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 **Figure 1: End-to-End Architecture**  
 <img width="2048" height="767" alt="Arhcitetcure for cloud monitroing" src="https://github.com/user-attachments/assets/1a4c2027-35cf-437c-921f-3656ca694035" />
@@ -35,16 +35,16 @@ This project demonstrates **event-driven detection, real-time alerting, and acti
 
 ---
 
-## ⚙️ Implementation Details
+##  Implementation Details
 
-### 1️⃣ Logging & Tracking
+### 1️ Logging & Tracking
 - Enabled **AWS CloudTrail** to capture `GetSecretValue` calls across all regions.
 - Configured log aggregation and retention in **CloudWatch Log Groups**.
 - Archived logs in **Amazon S3** for long-term retention and audit compliance.
 
 ---
 
-### 2️⃣ Real-Time Monitoring
+### 2️ Real-Time Monitoring
 - Created a **CloudWatch Metric Filter** for `eventName = GetSecretValue`.
 - Configured **CloudWatch Alarm** with 1-minute evaluation window.  
 
@@ -61,7 +61,7 @@ This project demonstrates **event-driven detection, real-time alerting, and acti
 
 ---
 
-### 3️⃣ Incident Response Automation
+### 3️ Incident Response Automation
 - Integrated **Amazon SNS** to publish notifications on alarm state changes.
 - Subscribed security team email distribution list for immediate alerts.
 
@@ -77,7 +77,7 @@ Includes:
 
 ---
 
-### 4️⃣ Visualization & Analysis
+### 4️ Visualization & Analysis
 **Figure 4: CloudWatch Alarm History**  
 <img width="800" height="347" alt="cloud monitor 3" src="https://github.com/user-attachments/assets/1f9d09dd-2a90-41bb-942c-ba89f773f85f" />
 
@@ -89,20 +89,20 @@ This dashboard provides:
 
 ---
 
-## 🏆 Outcomes
-- 📉 **MTTD Reduction:** From hours to < 60 seconds  
-- 🛡️ **Improved SOC Capabilities:** Real-time triage and investigation  
-- 📜 **Audit-Ready Evidence:** Long-term log retention in encrypted S3 buckets  
-- 🚀 **Operational Efficiency:** Fully automated, no manual log inspection required  
+##  Outcomes
+-  **MTTD Reduction:** From hours to < 60 seconds  
+-  **Improved SOC Capabilities:** Real-time triage and investigation  
+-  **Audit-Ready Evidence:** Long-term log retention in encrypted S3 buckets  
+-  **Operational Efficiency:** Fully automated, no manual log inspection required  
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 **Amazon KMS · AWS CloudTrail · AWS CloudWatch (Log Groups, Metric Filters, Alarms) · Amazon SNS · Amazon S3**
 
 ---
 
-## 💡 Why This Matters
+##  Why This Matters
 Unlike basic logging setups, **aws-secret-monitor** is a **full event-driven detection pipeline** that demonstrates:
 - **Cloud Security Architecture Expertise** – End-to-end system design
 - **Operational Maturity** – Automated detection & alerting, ready for production

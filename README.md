@@ -110,7 +110,7 @@ Unlike basic logging setups, **aws-secret-monitor** is a **full event-driven det
 
 ---
 
-## 📄 License & Use
+##  License & Use
 This project is designed for **educational and portfolio purposes**, but can be adapted for real-world production environments with minimal changes.
 
 ---
